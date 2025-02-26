@@ -20,7 +20,7 @@ export function orderByProps(obj, sortlist) {
 export function getValue(obj) {
     let result = []
     obj.special.forEach((element) => {  
-        if (element.hasOwnProperty('description')) {
+        if ('description' in element) {
             const {id, name, icon, description} = element
             result.push({id, name, icon, description})
         }
